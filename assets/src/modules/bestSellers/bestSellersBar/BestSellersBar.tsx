@@ -19,16 +19,7 @@ export class BestSellersBar extends React.Component {
         <div className="col-md-2 hidden-sm hidden-xs">
           <LinkContainer to="/best">
             <NavItem><h3>Bookstore<br/>Best Sellers</h3></NavItem>
-          </LinkContainer>
-        </div>
-        <div className="row">
-          {bestSellers.map(book =>
-            <div className="col-md-2 hidden-sm hidden-xs" key={book}>
-              <LinkContainer to="/best">
-                <NavItem><img src={book} className="thumbs" /></NavItem>
-              </LinkContainer>
-            </div>)}
-        </div>
+
       </div>
     );
   }
