@@ -34,10 +34,12 @@ else
 		if [[ $INPUT2 == "y" ]]; then
 			git push
 		fi
-		npm run start
-		
+				
 	else
 		exit 1
 	fi
 	
+npm run start
+
 fi
+
