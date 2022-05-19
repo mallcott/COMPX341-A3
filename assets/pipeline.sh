@@ -20,13 +20,22 @@ else
 	
 	read INPUT
 	
-	if [[ $INPUT == y ]]; then		
+	if [[ $INPUT == "y" ]]; then		
 		git add .
 		echo "Please specify commit message"
 		read MESSAGE
 		git commit -m "$MESSAGE"
 		
 		echo "Build commited"
+		echo "Would you like to push? [y/n]"
+		
+		read INPUT2
+		
+		if [[ $INPUT2 == "y" ]]; then
+			git push
+		fi
+		npm run start
+		
 	else
 		exit 1
 	fi
